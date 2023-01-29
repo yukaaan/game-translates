@@ -1,0 +1,11 @@
+{
+  "liveSassCompile.settings.formats": [
+    //Sassの出力内容の設定
+    {
+      //"format": "expanded", //nested、compact、compressedのどれかを選ぶ
+      "format": "compressed", //コンパイル時にMinifyはcompressed
+      "extensionName": ".css", //style.cssとして出力
+      "savePath": "/asset_game-translates/css" //cssフォルダの中にstyle.cssを出力
+    },
+  ],
+}

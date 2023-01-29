@@ -1,0 +1,290 @@
+@charset "UTF-8";
+@use "setting" as *;
+/*                トップページ用
+======================================================= */
+/*TOP共通*/
+
+/********************************************************
+セクションの余白
+********************************************************/
+
+#onlineReservation {
+  margin: 0 auto;
+}
+#greeting {
+  margin-top: 140px;
+}
+#information {
+  margin-top: 140px;
+}
+#room {
+  margin-top: 190px;
+  padding-bottom: 100px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 180px;
+    bottom: 0;
+    left: 0;
+    background-color: $colorGrayBase;
+    z-index: -1;
+  }
+}
+#hall {
+  margin-top: 190px;
+  padding-bottom: 100px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 180px;
+    bottom: 0;
+    left: 0;
+    background-color: $colorGrayBase;
+    z-index: -1;
+  }
+}
+#apartment{
+  margin-top: 140px;
+}
+/********************************************************
+オンライン予約
+********************************************************/
+.onlineReservation_group {
+  width: 100%;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "Online Reserve";
+    font-size: 90px;
+    font-weight: bold;
+    font-family: $fontLato;
+    bottom: -11px;
+    right: 20px;
+    color: $colorSite;
+    opacity: 0.2;
+  }
+}
+.onlineReservation_block {
+  @include w1000;
+}
+.onlineReservation_block_inr {
+  width: 660px;
+  padding-left: 10px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  h2 {
+    font-size: 30px;
+    font-family: $fontNotoCJK;
+    font-weight: 700;
+    color: $colorSite;
+  }
+}
+
+/********************************************************
+ご挨拶
+********************************************************/
+.greeting_group {
+  @include w1600;
+  padding: 0 200px 0 50px;
+}
+.greeting_group_inr {
+  display: flex;
+  justify-content: space-between;
+}
+.greeting_block {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 504px);
+  height: 564px;
+  &.left {
+    .img {
+      max-width: 846px;
+      width: 100%;
+      background-color: $colorGrayBase;
+      position: relative;
+      border-radius: 5px;
+      height: 564px;
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 50px;
+        left: -50px;
+        border-radius: 5px;
+      }
+    }
+  }
+  &.right {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    width: 504px;
+  }
+  .more_btn_group {
+    position: absolute;
+    content: "";
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    a {
+      margin: 0 0 0 auto;
+    }
+  }
+}
+.greeting_block_inr {
+  display: flex;
+  flex-direction: row-reverse;
+
+  .greeting_txt {
+    padding: 0 35px 0 0;
+    p {
+      writing-mode: vertical-rl;
+      -webkit-text-orientation: mixed;
+      text-orientation: mixed;
+      font-size: 18px;
+      font-weight: 500;
+      font-family: $fontGothic;
+      line-height: 2.67;
+      letter-spacing: 0.5em;
+    }
+  }
+}
+
+/********************************************************
+宿泊のご案内
+********************************************************/
+.information_group {
+  .sectionTitle_word {
+    text-align: center;
+    padding-bottom: 40px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "Information";
+      font-size: 90px;
+      font-weight: bold;
+      font-family: $fontLato;
+      bottom: -36px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: $colorSite;
+      opacity: 0.2;
+      z-index: -1;
+    }
+  }
+  + .more_btn_group {
+    margin-top: 60px;
+  }
+}
+/********************************************************
+お部屋・館内施設
+********************************************************/
+.room_group_inr {
+  @include w1200;
+  display: flex;
+  &.reverce {
+    flex-direction: row-reverse;
+    .room_block {
+      &.right {
+        margin-left: 0px;
+        margin-right: 50px;
+      }
+      .room_block_inr {
+        .img {
+          &::after {
+            left: unset;
+            right: -50px;
+          }
+        }
+      }
+    }
+  }
+}
+.room_block {
+  &.left {
+    width: calc(100% - 400px);
+    max-width: 800px;
+  }
+  &.right {
+    width: 350px;
+    margin-left: 50px;
+    .more_btn_group {
+      margin-top: 40px;
+    }
+  }
+}
+.room_block_inr {
+  .img {
+    width: 100%;
+    max-width: 800px;
+    height: 533px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: $colorGrayBase;
+      top: -50px;
+      left: -50px;
+      z-index: -1;
+      border-radius: 5px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+}
+.room_txt {
+  margin-top: 40px;
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: $fontGothic;
+    line-height: 1.5;
+  }
+}
+.roomPictures_group {
+  margin-top: 60px;
+  overflow: hidden;
+}
+.roomPictures_group_inr {
+  display: flex;
+  margin: -13px;
+}
+.roomPictures_block {
+  margin: 13px;
+  width: calc(100% / 4);
+}
+.roomPictures_block_inr {
+  .img {
+    width: 100%;
+  }
+}
+/********************************************************
+ホテルアパートメント
+********************************************************/
+.apartment_group{
+  @include w1200
+}
+.apartment_txt{
+  max-width: 800px;
+  margin: 30px auto 0;
+  p{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: $fontGothic;
+    line-height: 1.8;
+    text-align: center;
+  }
+}

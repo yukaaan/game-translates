@@ -141,7 +141,7 @@ $fontGothic: "游ゴシック", "游ゴシック体", "Yu Gothic", YuGothic, "�
   Meiryo, Osaka, sans-serif;
 $fontLato: "Lato", sans-serif;
 $fontNotoCJK: "NotoSansCJKJP", sans-serif;
-/*@font-face {
+@font-face {
   font-family: "Lato";
   font-style: "normal";
   font-weight: 700;
@@ -161,8 +161,6 @@ $fontNotoCJK: "NotoSansCJKJP", sans-serif;
   font-weight: 500;
   font-display: swap; //読み込み中のテキスト表示
   src: url("../fonts/NotoSansCJKjp-Medium-subset.woff") format("woff"),
-    /* Modern Browsers url("../fonts/NotoSansCJKjp-Medium-subset.ttf")
-      format("truetype");  Safari, Android, iOS 
 }
 @font-face {
   font-family: "NotoSansCJKJP";
@@ -170,10 +168,7 @@ $fontNotoCJK: "NotoSansCJKJP", sans-serif;
   font-weight: 700;
   font-display: swap; //読み込み中のテキスト表示
   src: url("../fonts/NotoSansCJKjp-Bold-subset.woff") format("woff"),
-    /* Modern Browsers url("../fonts/NotoSansCJKjp-Bold-subset.ttf")
-      format("truetype");  Safari, Android, iOS 
-}*/
-
+}
 ////////// メディアクエリー デバイス幅//////////
 //ディスプレイサイズ/*1920×1080、2560×1440、1600×900、1680×1050は定義をつけない
 $width-1599: 1599px; // 画面幅1600未満から1440のディスプレイに対応

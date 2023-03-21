@@ -37,7 +37,6 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="/asset_game-translates/css/common.css">
   <link rel="stylesheet" href="/asset_game-translates/css/first_view.css">
-  <link rel="stylesheet" href="/asset_game-translates/css/home.css">
 </head>
 
 <body id="home" class="home">
@@ -50,10 +49,10 @@
             <div class="transtlate_block">
               <div class="transtlate_block_inr">
                 <h2>翻訳する</h2>
-                <p>翻訳したい文章を貼り付けてください。</p>
+                <p class="text">翻訳したい文章を貼り付けてください。</p>
                 <div id="app">
                   <input v-model="text" @input="translate" />
-                  <p>{{ output }}</p>
+                  <p class="output">{{ output }}</p>
                 </div>
               </div>
             </div>
@@ -70,7 +69,6 @@
     <?php include($_SERVER['DOCUMENT_ROOT'] . "/inc-footer.php"); ?>
   </div><!-- wrapper -->
   <?php include($_SERVER['DOCUMENT_ROOT'] . "/inc-spmenu.php"); ?>
-  <?php include($_SERVER['DOCUMENT_ROOT'] . "/inc-js.php"); ?>
   <script>
     // アドレスバーを考慮ｈした100vh対策
     window.addEventListener("DOMContentLoaded", () => {

@@ -160,14 +160,14 @@ $fontNotoCJK: "NotoSansCJKJP", sans-serif;
   font-style: "normal";
   font-weight: 500;
   font-display: swap; //読み込み中のテキスト表示
-  src: url("../fonts/NotoSansCJKjp-Medium-subset.woff") format("woff"),
+  src: url("../fonts/NotoSansCJKjp-Medium-subset.woff") format("woff");
 }
 @font-face {
   font-family: "NotoSansCJKJP";
   font-style: "normal";
   font-weight: 700;
   font-display: swap; //読み込み中のテキスト表示
-  src: url("../fonts/NotoSansCJKjp-Bold-subset.woff") format("woff"),
+  src: url("../fonts/NotoSansCJKjp-Bold-subset.woff") format("woff");
 }
 ////////// メディアクエリー デバイス幅//////////
 //ディスプレイサイズ/*1920×1080、2560×1440、1600×900、1680×1050は定義をつけない

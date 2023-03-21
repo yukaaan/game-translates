@@ -84,10 +84,12 @@
           <div class="transtlate_group_inr">
             <div class="transtlate_block">
               <div class="transtlate_block_inr">
-                <h2>翻訳する</h2>
-                <div id="app">
-                  <input v-model="text" @input="translate" />
-                  <p class="output">{{ output }}</p>
+                <h2>更新情報</h2>
+                <div class="news_dl_wrap">
+                  <dl class="news_dl">
+                    <dt>2023.03.21</dt>
+                    <dd>ホームページを公開しました。</dd>
+                  </dl>
                 </div>
               </div>
             </div>
@@ -107,9 +109,9 @@
     <div id="sp_menu_area">
       <div id="sp_gnavi">
         <ul>
-        <li><a href="/">翻訳</a></li>
-        <li><a href="/request/">リクエスト</a></li>
-        <li><a href="/news/">お知らせ</a></li>
+          <li><a href="/">翻訳</a></li>
+          <li><a href="/request/">リクエスト</a></li>
+          <li><a href="/news/">お知らせ</a></li>
         </ul>
       </div>
     </div>
@@ -134,32 +136,6 @@
     });
   </script>
 
-
-
-  <script type="module">
-    import {
-      createApp
-    } from "https://unpkg.com/vue@3.2.4/dist/vue.esm-browser.prod.js";
-
-    const app = createApp({
-      /* Vue.jsの各種処理 */
-
-      data() {
-        return {
-          text: "This is a zombie.",
-          output: "これはゾンビです。"
-        };
-      },
-      methods: {
-        async translate() {
-          const url = 'https://script.google.com/macros/s/AKfycby9cXKtga6lXC5-Hqxez9CYgUOScTGVPre1pawfeGpLmsLgtSpUgSfTzFCDJb5GkbdA/exec?text='
-          this.output = await fetch(url + encodeURIComponent(this.text)).then((r) => r.text());
-        }
-      }
-
-    });
-    app.mount("#app");
-  </script>
 </body>
 
 </html>

@@ -1,0 +1,150 @@
+@charset "UTF-8";
+@use "setting" as *;
+
+#wrapper {
+  overflow: hidden;
+  #first_view {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+  } //first_view
+  #transtlate {
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 9998;
+  }
+  .transtlate_group {
+    height: 100%;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      mask: url(/asset_game-translates/media/images/common/zombie05.svg)
+        no-repeat center/contain;
+      width: 500px;
+      height: 500px;
+      background: $colorSite;
+      bottom: -170px;
+      left: 0%;
+      @include media1023 {
+        width: 400px;
+        height: 400px;
+      }
+      @include media767 {
+        bottom: -86px;
+        left: -54px;
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+  .transtlate_group_inr {
+    height: 100%;
+    position: relative;
+  }
+  .transtlate_block {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  .transtlate_block_inr {
+    h2 {
+      font-size: 42px;
+      font-family: $fontGothic;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.05em;
+      @include media1023 {
+        font-size: 38px;
+      }
+      @include media767 {
+        font-size: 28px;
+      }
+    }
+    .text {
+      font-size: 20px;
+      text-align: center;
+      font-family: $fontGothic;
+      font-weight: 500;
+      margin: 15px 30px;
+      @include media767 {
+        margin: 15px;
+        font-size: 18px;
+      }
+      br {
+        @include media767 {
+          display: none;
+        }
+      }
+    }
+  }
+}
+#app {
+  margin: 30px;
+  text-align: center;
+  padding-bottom: 250px;
+  @include media767 {
+    margin: 20px 15px;
+    padding-bottom: 100px;
+  }
+  input {
+    width: 700px;
+    font-size: 20px;
+    max-width: 100%;
+    @include media767 {
+      font-size: 18px;
+    }
+  }
+  .output {
+    width: 700px;
+    font-size: 20px;
+    max-width: 100%;
+    margin: 10px auto 0;
+    text-align: left;
+    font-family: $fontGothic;
+    font-weight: 500;
+    @include media767 {
+      font-size: 18px;
+    }
+  }
+}
+.news_dl_wrap {
+  margin: 30px;
+  @include media767 {
+    margin: 20px 15px;
+  }
+}
+.news_dl {
+  display: flex;
+  font-size: 20px;
+  font-family: $fontGothic;
+  font-weight: 500;
+  width: 700px;
+  max-width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #e6e6e6;
+  padding: 10px 0;
+  @include media767 {
+    flex-wrap: wrap;
+    font-size: 18px;
+  }
+  &:last-child {
+    border-bottom: 1px solid #e6e6e6;
+  }
+  dt {
+    width: 200px;
+    @include media767 {
+      width: 100%;
+    }
+  }
+  dd {
+    width: calc(100% - 200px);
+    @include media767 {
+      width: 100%;
+    }
+  }
+}

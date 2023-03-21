@@ -38,171 +38,6 @@ table tr th {
   padding: 0px;
 }
 
-/*                iframeのレスポン化
-======================================================= */
-.frame_respon {
-  .fb_iframe_widget,
-  .fb_iframe_widget span,
-  .fb_iframe_widget iframe[style] {
-    width: 100%important;
-  }
-}
-.gmap {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
-  iframe,
-  object,
-  embed {
-    border: none !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-/********************************************   
-           　  セクションのタイトル
-*********************************************/
-.sectionTitle {
-  .sectionTitle_word {
-    font-size: 30px;
-    font-weight: 700;
-    font-family: $fontNotoCJK;
-    @include media1599 {
-      font-size: 30rem;
-    }
-    @include media767 {
-      font-size: 24px;
-    }
-  }
-  &.vertical {
-    .sectionTitle_word {
-      writing-mode: vertical-rl;
-      -webkit-text-orientation: mixed;
-      text-orientation: mixed;
-      width: 70px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      &::before,
-      &::after {
-        position: absolute;
-        content: "";
-        width: 1px;
-        height: 100%;
-        background-color: $colorGrayWeak;
-        top: 0;
-        left: 0;
-        transform: translateX(-50%);
-      }
-      &::after {
-        left: 100%;
-      }
-      span {
-        margin-top: 43px;
-        font-family: $fontLato;
-        font-weight: 400;
-        font-size: 14px;
-        color: $colorGrayStrong;
-        @include media1599 {
-          font-size: 14rem;
-        }
-        @include media767 {
-          font-size: 12px;
-        }
-      }
-    }
-  }
-  &.jp {
-    text-align: center;
-    .sectionTitle_jp {
-      font-family: $fontNotoCJK;
-      font-weight: 500;
-      font-size: 16px;
-      color: $colorSite;
-      position: relative;
-      display: inline-block;
-      padding: 0 30px;
-      @include media1599 {
-        font-size: 16rem;
-      }
-      @include media767 {
-        font-size: 14px;
-      }
-      &::before,
-      &::after {
-        position: absolute;
-        content: "";
-        width: 20px;
-        height: 2px;
-        background-color: $colorSite;
-        top: 50%;
-        left: 0px;
-        transform: translateY(-50%);
-      }
-      &::after {
-        left: 100%;
-        transform: translateX(-100%);
-      }
-    }
-    .sectionTitle_word {
-      margin-top: 10px;
-      text-align: center;
-      @include media1599 {
-        margin-top: 10rem;
-      }
-      @include media767 {
-        margin-top: 5px;
-      }
-    }
-  }
-
-  &.en {
-    .sectionTitle_en {
-      font-family: $fontLato;
-      font-weight: 400;
-      font-size: 14px;
-      color: $colorGrayStrong;
-      line-height: 1;
-      @include media1599 {
-        font-size: 14rem;
-      }
-      @include media767 {
-        font-size: 12px;
-      }
-    }
-    .sectionTitle_word {
-      margin-top: 10px;
-      line-height: 1;
-      padding-bottom: 14px;
-      position: relative;
-      @include media1599 {
-        margin-top: 10rem;
-        padding-bottom: 14rem;
-      }
-      @include media767 {
-        margin-top: 5px;
-        padding-bottom: 10px;
-      }
-      &::after {
-        position: absolute;
-        content: "";
-        width: 30px;
-        height: 4px;
-        background-color: $colorSite;
-        bottom: 0;
-        left: 0;
-      }
-    }
-  }
-}
-
 /********************************************   
            　  改行 表示非表示
 *********************************************/
@@ -215,234 +50,6 @@ table tr th {
   display: none;
   @include media767 {
     display: block;
-  }
-}
-/********************************************   
-           　  リスト
-*********************************************/
-.kome_num_list {
-  width: 331px;
-  margin: 25px auto 0;
-  @include media1599 {
-    width: 331rem;
-    margin: 25rem auto 0;
-  }
-  @include media1023 {
-    width: 350rem;
-  }
-  @include media767 {
-    width: 100%;
-    max-width: 350px;
-    margin: 20px auto 0;
-  }
-  li {
-    position: relative;
-    font-size: 12px;
-    padding-left: 20px;
-    @include media1599 {
-      font-size: 12rem;
-      padding-left: 20rem;
-    }
-
-    @include media767 {
-      font-size: 12px;
-      padding-left: 20px;
-    }
-    &::before {
-      position: absolute;
-      content: "※1";
-      font-size: 12px;
-      top: 0;
-      left: 0;
-      @include media1599 {
-        font-size: 12rem;
-      }
-      @include media767 {
-        font-size: 12px;
-      }
-    }
-    &:nth-child(2) {
-      &::before {
-        content: "※2";
-      }
-    }
-  }
-}
-.kome_list {
-  margin: 30px auto 0;
-  @include media1599 {
-    margin: 30rem auto 0;
-  }
-  @include media767 {
-    margin: 3px 0 auto;
-  }
-  li {
-    text-align: center;
-    margin-left: 5px;
-    @include media1599 {
-      margin-left: 5rem;
-    }
-    @include media767 {
-      margin-left: 5px;
-    }
-    span {
-      position: relative;
-      font-size: 14px;
-      padding-left: 14px;
-      display: inline-block;
-      @include media1599 {
-        font-size: 14rem;
-        padding-left: 14rem;
-      }
-      @include media767 {
-        font-size: 10px;
-        padding-left: 10px;
-      }
-      &::before {
-        position: absolute;
-        content: "※";
-        font-size: 12px;
-        top: 1px;
-        left: 0;
-        @include media1599 {
-          font-size: 12rem;
-        }
-        @include media767 {
-          top: 0;
-          font-size: 10px;
-        }
-      }
-    }
-  }
-}
-/********************************************   
-           　  swiper
-*********************************************/
-
-.swiper-button-prev,
-.swiper-button-next {
-  z-index: 3;
-  width: 69px;
-  height: 69px;
-  background-color: $colorSite;
-  border-radius: 50%;
-  top: calc(50% - 25px);
-  transition: 0.5s;
-  border: 3px solid $colorSite;
-  transform: translateX(-50%);
-  left: 35px;
-  @include media1599 {
-    width: 69rem;
-    height: 69rem;
-    top: calc(50% - 25rem);
-    left: 35rem;
-  }
-  @include media1024 {
-    &:hover {
-      background-color: #fff;
-      .arrowBtn {
-        &::before {
-          background-color: $colorSite;
-        }
-      }
-    }
-  }
-  @include media767 {
-    width: 38px;
-    height: 38px;
-    top: calc(50% - 3px);
-    left: 20px;
-  }
-  .arrowBtn {
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      top: calc(50% - 13px);
-      width: 19px;
-      height: 27px;
-      right: -10px;
-      mask: url(/asset_lp6/media/images/swiper_arrow.svg) no-repeat
-        center/contain;
-      background-color: #fff;
-      @include media1599 {
-        top: calc(50% - 13rem);
-        width: 19rem;
-        height: 27rem;
-        right: -10rem;
-      }
-      @include media767 {
-        top: calc(50% - 7px);
-        width: 10px;
-        height: 14px;
-        right: -5px;
-      }
-    }
-  }
-  &::before,
-  &::after {
-    content: none;
-  }
-}
-.swiper-button-next {
-  transform: translateX(-50%);
-  left: calc(100% - 35px);
-  @include media1599 {
-    left: calc(100% - 35rem);
-  }
-  @include media767 {
-    left: calc(100% - 22px);
-  }
-  .arrowBtn {
-    &::before {
-      transform: rotate(-180deg);
-      right: -12px;
-      @include media1599 {
-        right: -12rem;
-      }
-      @include media767 {
-        right: -6px;
-      }
-    }
-  }
-}
-/*ナビゲーションのボタン*/
-.swiper-pagination-horizontal {
-  &.swiper-pagination-bullets {
-    .swiper-pagination-bullet {
-      margin: 0 7px;
-      @include media1599 {
-        margin: 0 7rem;
-      }
-      @include media767 {
-        margin: 0 5px;
-      }
-    }
-  }
-}
-
-.swiper-pagination-bullet {
-  background: #fff;
-  border: 2px solid $colorSite;
-  opacity: 1;
-  width: 12px;
-  height: 12px;
-  transition: 0.5s;
-  @include media1599 {
-    width: 12rem;
-    height: 12rem;
-  }
-  @include media1024 {
-    &:hover {
-      opacity: 0.6;
-    }
-  }
-  @include media767 {
-    width: 12px;
-    height: 12px;
-  }
-  &.swiper-pagination-bullet-active {
-    background: $colorSite;
   }
 }
 
@@ -461,34 +68,42 @@ table tr th {
   width: 100%;
   z-index: 10;
   height: 80px;
-  background-color: rgb(255, 255, 255, 0.6);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   transition: all 0.5s;
+  @include media1279 {
+    padding-left: 50px;
+  }
+  @include media767 {
+    padding-left: 25px;
+    height: 60px;
+  }
   &.scroll {
   }
   #hd_logo {
     .logo_inner {
       h1 {
-        a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          width: 230px;
-          font-family: $fontLato;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 230px;
+        font-family: $fontLato;
+        font-weight: 700;
+        letter-spacing: 0em;
+        font-size: 30px;
+        line-height: 1;
+        @include media767 {
+          width: 180px;
+          font-size: 28px;
+        }
+        span {
+          font-size: 16px;
+          font-family: $fontNotoCJK;
           font-weight: 700;
-          letter-spacing: 0.05em;
-          font-size: 30px;
-          line-height: 1;
-          span {
-            font-size: 16px;
-            font-family: $fontNotoCJK;
-            font-weight: 700;
-            display: inline-block;
-            line-height: 1;
-            img {
-              width: 100%;
-              height: auto;
-            }
+          display: block;
+          line-height: 1.2;
+          @include media767 {
+          font-size: 14px;
           }
         }
       }
@@ -500,13 +115,17 @@ table tr th {
     width: auto;
     height: 100%;
     transition: all 0.5s;
-    display: flex;
+
     align-items: center;
     justify-content: center;
     background-color: $colorSite;
     width: 80px;
     position: relative;
-    &::before {
+    @include media767 {
+      display: flex;
+      width: 60px;
+    }
+    /*&::before {
       position: absolute;
       content: "";
       width: 1px;
@@ -515,7 +134,7 @@ table tr th {
       top: 50%;
       left: 0;
       transform: translateY(-50%);
-    }
+    }*/
     .sp_btn_cont {
       position: relative;
       width: 22px;
@@ -548,6 +167,7 @@ table tr th {
   font-size: 16px;
   font-weight: bold;
   height: 100%;
+
 }
 .gnavi_wrap {
   height: 100%;
@@ -556,6 +176,11 @@ table tr th {
 }
 .gnavi_group {
   height: 100%;
+  &.left{
+      @include media767 {
+  display: none;
+  }
+  }
 }
 .gnavi_group_ul {
   height: 100%;
@@ -720,16 +345,6 @@ table tr th {
   }
   #sp_menu_area {
     padding: 30px 26px 0;
-    .sp_gnavi_title {
-      margin-bottom: 30px;
-      p {
-        text-align: center;
-        span {
-          font-size: 32px;
-          font-weight: 700;
-        }
-      }
-    }
     #sp_gnavi {
       ul {
         display: flex;
@@ -837,57 +452,13 @@ table tr th {
         }
       }
     }
-    #sp_menu_info {
-      margin-top: 30px;
-      ul {
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        li {
-          padding: 0 30px;
-          @include media767 {
-            padding: 0 14px;
-            font-size: 14px;
-          }
-          a {
-            display: block;
-            color: #fff;
-            text-decoration: none;
-            transition: all 0.5s;
-            @include media1024 {
-              &:hover {
-                transition: all 0.5s;
-                color: #009d4b;
-              }
-            }
-          }
-        }
-      }
-    }
   }
-  .fuchs_logo {
-    width: 142px;
-    margin: auto;
-    .fushs_logo_inner {
-      > a,
-      > div {
-        display: flex;
-        flex-direction: column;
-        > span {
-          display: block;
-          width: 100%;
-          + span {
-            margin-top: 5px;
-          }
-        }
-      }
-    }
-  }
+
 } //sp_menu
 .sp_menu_open {
   border-top: solid 1px #4d4e4e;
   #sp_menu {
-    top: 80px;
+    top: 60px;
     z-index: 9999;
     transition: 400ms;
   }
@@ -912,72 +483,8 @@ table tr th {
       }
     }
   }
-  &#sp_menu.scroll {
-    top: 60px;
-  }
 }
 
-/*                content
-======================================================= */
-
-.more_btn {
-  width: 100%;
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    width: 100%;
-    max-width: 380px;
-    height: 60px;
-    text-decoration: none;
-    font-weight: 700;
-    border: solid 1px $colorSite;
-    transition: all 0.5s;
-    text-align: center;
-    margin: 0 auto;
-    @include media1599 {
-    }
-    @include media1024 {
-      &:hover {
-        background-color: $colorSite;
-        &::after {
-          background-color: #fff;
-        }
-        span {
-          color: #fff;
-        }
-      }
-    }
-    @include media767 {
-      max-width: 380px;
-    }
-    position: relative;
-    &::after {
-      position: absolute;
-      content: "";
-      mask: url(/wp-content/themes/game-translates/asset_game-translates/media/images/common/more_btn_arrow.svg)
-        no-repeat center/contain;
-      background-color: $colorSite;
-      width: 60px;
-      height: 9px;
-      top: 50%;
-      right: -20px;
-      transform: translate(-50%, -50%);
-    }
-    span {
-      display: inline-block;
-      color: $colorSite;
-      font-size: 18px;
-      font-weight: bold;
-      font-family: $fontGothic;
-      transition: all 0.5s;
-    }
-  }
-  + .more_btn {
-    margin-top: 25px;
-  }
-}
 /*                投稿レイアウト設定
 ======================================================= */
 
@@ -1039,71 +546,25 @@ table tr th {
 
 /*                footer
 ======================================================= */
-#footer {
-  border-top: solid 1px #616161;
-  background-color: #000;
+footer {
+  background-color: #333;
   padding: 0 50px;
+  margin-top: 20px;
   @include media767 {
     padding: 0 30px;
   }
   @include media427 {
     padding: 0 15px;
   }
-  .main_width {
-    padding: 0;
-    .brand_list {
-      margin-top: 65px;
-      ul {
-        display: flex;
-        flex-flow: wrap;
-        justify-content: center;
-        li {
-          padding: 4px 0;
-          border-left: solid 2px #616161;
-          width: 20%;
-          &:last-child {
-            border-right: solid 2px #616161;
-            @include media767 {
-              border: none;
-            }
-          }
-          @include media767 {
-            margin-bottom: 20px;
-            border-left: none;
-            width: 33.3333%;
-            &.col_2 {
-              width: 40%;
-            }
-          }
-          a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img {
-              width: auto;
-              @include media1024 {
-                height: 50px;
-              }
-              @include media767 {
-                height: 64px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  .ft_logo {
-    margin-top: 50px;
-    text-align: center;
-  }
   .copy {
-    margin-top: 20px;
-    padding-bottom: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     p {
       color: #fff;
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 } //footer

@@ -2,8 +2,8 @@
   <div id="header" role="banner">
     <div id="hd_logo">
       <div class="logo_inner">
-        <a href="<?php echo esc_url(home_url('/')); ?>">
-          <?php if (is_home() || is_front_page()) : ?><h1><span><img src="/wp-content/themes/game-translates/asset_game-translates/media/images/common/hd_logo.png" width="460" height="142" alt="ロゴマーク"></span></h1><?php else : ?><p><span><img src="/wp-content/themes/game-translates/asset_game-translates/media/images/common/hd_logo.png" width="86" height="62" alt="ロゴマーク"></span></p><?php endif; ?>
+        <a href="">
+         <h1>GAME TRANS<span>~パズサバ翻訳~</span></p>
         </a>
       </div>
     </div>
@@ -11,18 +11,15 @@
       <nav id="gnavi" role="navigation">
         <div class="gnavi_group left">
           <ul class="gnavi_group_ul gnavi_group_left_ul">
-            <li><a href="">宿泊案内</a></li>
-            <li><a href="">館内施設</a></li>
-            <li><a href="">客室</a></li>
-            <li><a href="">アパートメント</a></li>
-            <li><a href="">アクセス</a></li>
-            <li><a href="">新着情報</a></li>
+            <li><a href="">翻訳</a></li>
+            <li><a href="">リクエスト</a></li>
+            <li><a href="">お知らせ</a></li>
           </ul>
         </div>
         <div class="gnavi_group right">
           <ul class="gnavi_group_ul gnavi_group_right_ul">
-            <li><a href="">お問合せ</a></li>
-            <li><a href="">宿泊予約</a></li>
+            <li><a href="">JA</a></li>
+            <li><a href="">EN</a></li>
           </ul>
         </div>
       </nav><!-- gnavi -->

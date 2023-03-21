@@ -20,8 +20,7 @@
       &::before {
         position: absolute;
         content: "";
-        mask: url(/asset_game-translates/media/images/common/zombie05.svg)
-          no-repeat center/contain;
+        mask: url(/media/images/common/zombie05.svg) no-repeat center/contain;
         width: 500px;
         height: 500px;
         background: $colorSite;
